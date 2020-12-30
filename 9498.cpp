@@ -6,10 +6,11 @@ int main()
 {
 	int x;
 	cin >> x;
-	if (x >= 90) cout << "A";
-	else if (x >= 80 && x < 90) cout << "B";
-	else if (x >= 70 && x < 80) cout << "C";
-	else if (x >= 60 && x < 70) cout << "D";
+	int y = x / 10;
+	if (y==9||y==10) cout << "A";
+	else if (y==8) cout << "B";
+	else if (y==7) cout << "C";
+	else if (y==6) cout << "D";
 	else cout << "F";
 
 	return 0;
