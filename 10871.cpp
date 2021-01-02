@@ -7,20 +7,14 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	//정수 N개로 이루어진 수열 A와 정수 X
-	int n, x;
+	int n, x, a;
 	cin >> n >> x;
 
-	int* a = new int[n]();
 	for (int i = 0; i < n; i++)
 	{
-		cin >> a[i];
-	}
-	
-	for (int i = 0; i < n; i++)
-	{
-		if (a[i] < x)
-			cout << a[i] << " ";
+		cin >> a;
+		if (a < x)
+			cout << a << " ";
 	}
 
 	return 0;
