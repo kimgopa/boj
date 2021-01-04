@@ -13,15 +13,11 @@ int main()
 
 	int r = a * b * c;
 	int arr[10] = { 0 };
-	int x = 10;
-	int y = 0;	// r % x
 
-	while (x/10 < r)
+	while (0 < r)
 	{
-		y = r % x / (x / 10);
-		r -= y;
-		arr[y] += 1;
-		x *= 10;
+		arr[r % 10] += 1;
+		r = r / 10;
 	}
 
 	for (int i = 0; i < 10; i++)
