@@ -1,15 +1,18 @@
 #include <iostream>
-#include <string.h>
+#include <string>
+using namespace std;
 
 int main()
 {
-	char alphabet[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int alphabet_cnt[27] = { };
-	char word[1000001];
-	std::cin >> word;
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
 
-	int w_len = strlen(word);
-	int a_len = strlen(alphabet);
+	string alphabet = "?ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int alphabet_cnt[27] = {0,};
+	string word;
+	cin >> word;
+	int w_len = word.length();
+	int a_len = alphabet.length();
 	for (int i = 0; i < w_len; i++)
 	{
 		for (int j = 0; j < a_len; j++)
@@ -30,14 +33,11 @@ int main()
 		}
 		else if (alphabet_cnt[i] == max)
 		{
-			i_tmp = -1;
+			i_tmp = 0;
 		}
 	}
 
-	if (i_tmp == -1)
-		std::cout << "?";
-	else
-		std::cout << alphabet[i_tmp];
+	cout << alphabet[i_tmp];
 	
 	return 0;
 }
